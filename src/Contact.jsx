@@ -1,13 +1,15 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+
 const Contact = () => {
   const form = useRef();
 
   const emjs = {
-    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    serviceId:  process.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: process.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: process.env.VITE_EMAILJS_PUBLIC_KEY
+    
   };
 
   const sendEmail = (e) => {
