@@ -21,8 +21,9 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
-          alert("Message sent");
+          
+          alert("Message sent!");
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
